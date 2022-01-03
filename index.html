@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Random Numbers</title>
+</head>
+<body>
+  <header>
+    <div id="title"><h1>Random Number Generator</h1></div>
+  </header>
+
+
+  <div class="content">
+    <div class="numbers">
+      <form action="" id="form" class="form-container">
+        <label for="minNumber">Min:</label><br>
+        <input type="number" id="minNumber" name="minNumber" min="-999"  value="1"><br>
+        <label for="maxNumber">Max:</label><br>
+        <input type="number" id="maxNumber" name="maxNumber" max="999" value="10"><br>
+        <button type="submit" id="button">Randomize</button>
+      </form>
+    </div>
+    <div id="resultBox">
+      <div id="result">
+        <div class="numberTitle">
+          <h3>Your number will appear here</h3>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <footer>
+    <div class="footer"><h5>Developed by Victor Hugo</h5></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
