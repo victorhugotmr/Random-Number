@@ -6,6 +6,7 @@
   --lightblue: #3abcc5;
   --darkblue: #309aa1;
   --darkerblue: #24767b;
+  --red: #ee3450;
 }
 
 *{
@@ -24,6 +25,7 @@ body{
 
 header,footer{
   height: 10vh;
+  color: var(--darkblue);
   background: var(--white);
   padding: 1.5rem;
   display: flex;
@@ -48,6 +50,7 @@ header,footer{
 .numbers input{
   margin-bottom: .5rem;
   padding: 0.25rem;
+  width: 100%;
 }
 
 .numbers button{
@@ -79,14 +82,67 @@ header,footer{
 }
 
 #result{
-  width: 30%;
-  height: 50%;
+  width: 300px;
+  height: 200px;
   background: var(--white);
   color: var(--darkerblue);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 3%;
+}
+
+.error{
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--red);
+}
+
+.errorBox{
+  width: 200px;
+  height: 200px;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close{
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.close button{
+  padding: 0.25rem;
+  border: none;
+  background: var(--lightblue);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.close button:hover{
+  background: var(--darkblue);
+}
+.errorMessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.closed{
+  display: none;
 }
 
 footer{
@@ -95,4 +151,20 @@ footer{
   position: absolute;
   bottom: 0;
   padding: 1rem;
+}
+
+@media (max-width: 600px) {
+
+  #title h1{
+    font-size: 1rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #resultBox{
+    height: 100%;
+  }
 }
